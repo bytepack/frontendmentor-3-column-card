@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url("fonts/LexendDeca/LexendDeca-Regular.woff2") format("woff2"),
+    url("fonts/LexendDeca/LexendDeca-Regular.woff") format("woff"),
+    url("fonts/LexendDeca/LexendDeca-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Big Shoulders Display';
+    src: url("fonts/BigShouldersDisplay/BigShouldersDisplay-Bold.woff2") format("woff2"),
+    url("fonts/BigShouldersDisplay/BigShouldersDisplay-Bold.woff") format("woff"),
+    url("fonts/BigShouldersDisplay/BigShouldersDisplay-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.5rem;
+    font-family: 'Lexend Deca', sans-serif;
+    color: #fff;
+    min-height: 100vh;
+}
+
+main{
+    max-width: 120rem;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cards {
+    width: 85%;
+    margin: 5rem auto;
+}
+
+.cards__item {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 3rem;
+}
+
+.cards__item--sedan {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.cards__item--suv {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.cards__item--luxury {
+    background-color: hsl(179, 100%, 13%);
+}
+
+.cards__content > * + * {
+    margin-top: 2rem;
+}
+
+.cards__photo {
+    width: 7rem;
+}
+
+.cards__title {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 3.4rem;
+    font-weight: 700;
+}
+
+.cards__description {
+    line-height: 1.8;
+}
+
+.cards__link {
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 2000px;
+    padding: 1.5rem 2.5rem;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transition: all 0.3s;
+}
+
+.cards__item--sedan .cards__link {
+    color: hsl(31, 77%, 52%);
+}
+
+.cards__item--suv .cards__link {
+    color: hsl(184, 100%, 22%);
+}
+
+.cards__item--luxury .cards__link {
+    color: hsl(179, 100%, 13%);
+}
+
+.cards__link:active{
+    color: #fff;
+    background-color: rgba(0,0,0,0);
+}
+
+@media only screen and (min-width: 62em) {
+
+    .cards {
+        display: flex;
+    }
+
+    .cards__item {
+        justify-content: space-between;
+        flex-grow: 1;
+        flex-basis: 0;
+        gap: 5rem
+    }
+
+}
+
+ /* devices that can handle hover */
+@media(hover: hover) and (pointer: fine) {
+    .cards__link:hover{
+        color: #fff;
+        background-color: rgba(0,0,0,0);
+    }
+}
